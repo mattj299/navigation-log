@@ -68,8 +68,8 @@ p {
 
 @keyframes degOne {
     0% {transform: rotate(0deg);}
-    50% {transform: rotate(50deg);};
-    100% {transform: rotate(45deg);};
+    50% {transform: rotate(50deg);}
+    100% {transform: rotate(45deg);}
 }
 
 .active .two {
@@ -87,8 +87,8 @@ p {
 
 @keyframes degThree {
     0% {transform: rotate(0deg);}
-    50% {transform: rotate(-50deg);};
-    100% {transform: rotate(-45deg);};
+    50% {transform: rotate(-50deg);}
+    100% {transform: rotate(-45deg);}
 }
 
 
@@ -100,7 +100,7 @@ p {
     height: 100%;
     opacity: 0;
     background-color: rgb(50, 101, 134);
-    transition: all .75s;
+    transition: all .5s;
 }
 
 .menu.active {
@@ -110,16 +110,22 @@ p {
 .menu h1 {
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: all .75s;
+    transform: translateY(-100vh);
 }
 
 .menu.active h1 {
     animation: slideDown .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    /* transform: translateY(200px); */
 }
 
 @keyframes slideDown {
-    0% {transform: translateY(-100vh);};
-    50% {transform: translateY(300px);};
-    100% {transform: translateY(200px);};
+    0% {transform: translateY(-100vh);}
+    50% {transform: translateY(300px);}
+    100% {transform: translateY(200px);}
 }
 
 /* Footer */
