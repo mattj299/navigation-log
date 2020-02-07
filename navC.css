@@ -118,8 +118,8 @@ p {
 
 @keyframes slideDown {
     0% {transform: translateY(-100vh);};
-    50% {transform: translateY(300vh);};
-    100% {transform: translateY(200vh);};
+    50% {transform: translateY(300px);};
+    100% {transform: translateY(200px);};
 }
 
 /* Footer */
