@@ -32,6 +32,12 @@ p {
     padding: 0 50px;
 }
 
+
+#brand-name {
+    z-index: 1;
+    position: relative;
+}
+
 /* Menu button */
 .menu-toggle {
     position: absolute;
@@ -39,6 +45,7 @@ p {
     width: 55px;
     top: 20px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .one, .two, .three {
@@ -54,8 +61,28 @@ p {
     transform-origin: left;
 }
 
+.one {
+    animation: reverseOne .3s
+}
+
+@keyframes reverseOne {
+    0% {transform: rotate(45deg);}
+    50% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+
 .two {
     opacity: 1;
+}
+
+.three {
+    animation: reverseThree .3s;
+}
+
+@keyframes reverseThree {
+    0% {transform: rotate(-45deg);}
+    50% {transform: rotate(5deg);}
+    100% {transform: rotate(0deg);}
 }
 
 .active .one {
