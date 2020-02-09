@@ -37,7 +37,7 @@ p {
     z-index: 1;
     position: relative;
     transition: all .5s;
-    transition-delay: .75s;
+    transition-delay: .5s;
 }
 
 .brand-name.active {
@@ -134,11 +134,37 @@ p {
     height: 100%;
     opacity: 0;
     background-color: rgb(50, 101, 134);
-    transition: all .75s;
+    transition: all .5s;
 }
 
 .menu.active {
     opacity: 1;
+}
+
+.menu::before, .menu::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    width: 25vw;
+    height: 100vh;
+    top: 0;
+    opacity: 1;
+    background-color: #b94071;
+    transition: all .5s;
+}
+
+.menu::before {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.menu::after {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.menu.active::before, .menu.active::after {
+    transform: translateX(0%);
 }
 
 .menu h1 {
@@ -157,7 +183,7 @@ p {
 
 .menu.active h1 {
     animation: slideDown .5s;
-    animation-delay: 1s;
+    animation-delay: .75s;
     animation-fill-mode: forwards;
     /* transform: translateY(200px); */
 }
