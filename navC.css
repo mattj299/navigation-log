@@ -135,6 +135,7 @@ p {
     opacity: 0;
     background-color: rgb(50, 101, 134);
     transition: all .5s;
+    overflow: hidden;
 }
 
 .menu.active {
